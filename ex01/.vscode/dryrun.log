@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/mnt/nfs/homes/myrmarti/Documents/c/ex01'
+clang++ -Wall -Wextra -Werror   -c -o main.o main.cpp
+clang++ -Wall -Wextra -Werror   -c -o Contact.o Contact.cpp
+clang++ -Wall -Wextra -Werror   -c -o PhoneBook.o PhoneBook.cpp
+clang++ -Wall -Wextra -Werror -o Phonebook main.o Contact.o PhoneBook.o
+make: Leaving directory '/mnt/nfs/homes/myrmarti/Documents/c/ex01'
+ 

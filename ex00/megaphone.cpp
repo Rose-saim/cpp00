@@ -1,7 +1,4 @@
 #include <iostream>
-#include <unicode/unistr.h>
-#include <unicode/ustream.h>
-#include <unicode/locid.h>
 
 int main(int ac, char **av)
 {

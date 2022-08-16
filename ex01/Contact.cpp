@@ -18,6 +18,12 @@ void	Contacte::Nbr_Phone()
 	while (opt)
 	{
 		std::cout << "Phone number:";
+		if (std::cin.eof())
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			return ;
+		}
 		std::cin >> cmd;
 		this->SetNbr_Phone(cmd);
 		for (size_t i = 0; cmd[i]; i++)
@@ -38,10 +44,30 @@ void	Contacte::Nbr_Phone()
 
 void	Contacte::Nick_Name()
 {
-	std::cout << "Enter your nick name:";
 	std::string cmd;
+	std::cout << "Enter your nick name:";
+	if (std::cin.eof())
+	{
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		return ;
+	}
 	std::cin >> cmd;
 	this->SetNick_Name(cmd);
+}
+
+void	Contacte::Dark_Name()
+{
+	std::string cmd;
+	std::cout << "Enter your dark name:";
+	if (std::cin.eof())
+	{
+		std::cin.clear();
+		std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+		return ;
+	}
+	std::cin >> cmd;
+	this->SetDark_Name(cmd);
 }
 
 void	Contacte::Last_Name()
@@ -53,6 +79,12 @@ void	Contacte::Last_Name()
 	{
 		std::cout << "Enter your last name:";
 		std::cin >> cmd;
+		if (std::cin.eof())
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			return ;
+		}	
 		this->SetLast_Name(cmd);
 		for (size_t i = 0; cmd[i]; i++)
 		{
@@ -78,6 +110,12 @@ void	Contacte::First_Name()
 	{
 		std::cout << "Enter Your first name:";
 		std::cin >> cmd;
+		if (std::cin.eof())
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			return ;
+		}
 		this->SetFirst_Name(cmd);
 		for (size_t i = 0; cmd[i]; i++)
 		{

@@ -1,8 +1,9 @@
 #ifndef CONTACT
 #define CONTACT
 
-#include <iostream>
-#include <unistr.h>
+# include <iostream>
+# include <string>
+# include <limits>
 
 class Contacte
 {

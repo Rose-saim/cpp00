@@ -10,6 +10,12 @@ int	main()
 	{
 		std::cout << "Enter command: ";
 		std::cin >>command;
+		if (std::cin.eof())
+		{
+			std::cin.clear();
+			std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+			return (2);
+		}
 		if (command == "EXIT")
 			break ;
 		else if (command == "ADD")
@@ -21,6 +27,7 @@ int	main()
 				contact.First_Name();
 				contact.Last_Name();
 				contact.Nick_Name();
+				contact.Dark_Name();
 				first_one.SetContact(i, contact);
 				++i;
 		}
